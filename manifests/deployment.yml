@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zsoteszpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zsoteszpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: zsoteszpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: zsoteszpipelinesjavascriptdocker 
+          image: myacr210127.azurecr.io/zsoteszpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
